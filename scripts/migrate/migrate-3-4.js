@@ -2,6 +2,7 @@
  * Migrate Typescript-library-starter from 3. -> 4.
  */
 
+// @ts-ignore
 const JSON5 = require('json5');
 const kleur = require('kleur');
 const sortObjectByKeyNameList = require('sort-object-keys');

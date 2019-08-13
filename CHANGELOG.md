@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.0.1"></a>
+
+## [1.0.1](https://github.com/Bielik20/jenkins-rxjs/compare/v1.0.0...v1.0.1) (2019-08-13)
+
+### Bug Fixes
+
+- update yarn lock and lint-staged ([1563c02](https://github.com/Bielik20/jenkins-rxjs/commit/1563c02))
+
 <a name="1.0.0"></a>
 
 # [1.0.0](https://github.com/Bielik20/jenkins-rxjs/compare/v0.0.0...v1.0.0) (2019-08-12)

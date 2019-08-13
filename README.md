@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/1223799/50992071-73562500-1516-11e9-99fa-9f73b0f0eee2.png" width="597" alt="jenkins-rxjs">
+  <img src="https://user-images.githubusercontent.com/13436218/62941457-5b10f600-bdd6-11e9-9daa-0903d6744ee1.png" width="438" alt="jenkins-rxjs">
 </p>
 
 # jenkins-rxjs
@@ -17,8 +17,8 @@
 
 ## ✨ Features
 
-- feature one
-- feature two
+- runs entire jenkins job process
+- returns stream of observables
 
 ## 🔧 Installation
 
@@ -31,33 +31,25 @@ yarn add jenkins-rxjs
 Let's demonstrate simple usage with ... example:
 
 ```ts
-// your code example
+import * as createJenkins from 'jenkins';
+import { JenkinsRxJs } from 'jenkins-rxjs';
+
+const jenkinsPromisified = createJenkins({
+  baseUrl: myJenkinsUrl,
+  promisify: true,
+});
+const jenkinsRxJs = new JenkinsRxJs(jenkinsPromisified);
+
+jenkinsRxJs.run(jobBuildOptions).subscribe(console.log);
 ```
 
 ## 🎭 Examples
 
-Go checkout [examples](./examples) !
+Go checkout [adeng-jenkins-cli](https://github.com/Bielik20/adeng-jenkins-cli) and [jenkins-jobs-runner](https://github.com/Bielik20/jenkins-jobs-runner) for examples of integration.
 
 ## 📜 API
 
-> Document your API here
-
-### `publicMethodOne(value:string): string`
-
-This methods does foo bar moo...
-
-**Example:**
-
-```ts
-// example
-```
-
-## 🎓 Guides
-
-<details>
-<summary>How to do Foo</summary>
-Today we're gonna build Foo....
-</details>
+Full API can be found [here](https://bielik20.github.io/jenkins-rxjs/).
 
 ### 🕵️ Troubleshooting
 

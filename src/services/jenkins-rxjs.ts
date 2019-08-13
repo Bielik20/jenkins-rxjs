@@ -55,7 +55,6 @@ export class JenkinsRxJs {
     action: () => Promise<T>,
     parser: (res: T) => JobResponse,
   ): Observable<JobResponse> {
-    // tslint:disable-next-line: deprecation
     return Observable.create(async (observer: Subscriber<JobResponse>) => {
       let parserResult: JobResponse = {
         name: 'JOB',

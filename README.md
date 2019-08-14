@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/13436218/62941457-5b10f600-bdd6-11e9-9daa-0903d6744ee1.png" width="438" alt="jenkins-rxjs">
+  <img src="https://user-images.githubusercontent.com/13436218/62941457-5b10f600-bdd6-11e9-9daa-0903d6744ee1.png" width="300" alt="jenkins-rxjs">
 </p>
 
 # jenkins-rxjs
@@ -23,12 +23,12 @@
 ## 🔧 Installation
 
 ```sh
-yarn add jenkins-rxjs
+yarn add jenkins jenkins-rxjs
 ```
 
 ## 🎬 Getting started
 
-Let's demonstrate simple usage with ... example:
+Let's demonstrate simple usage with an example:
 
 ```ts
 import * as createJenkins from 'jenkins';

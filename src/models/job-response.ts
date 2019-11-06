@@ -1,4 +1,8 @@
-import { overestimateThreshold, pessimisticThreshold } from '../utils';
+import {
+  maxAwaitTime,
+  overestimateThreshold,
+  pessimisticThreshold,
+} from '../utils';
 import { BuildResponse } from './build-response';
 import {
   getQueueItemRemainingDuration,
@@ -126,12 +130,10 @@ export function getJobProgressPercentage(response: JobProgress): number {
   return elapsed / duration;
 }
 
-export function getJobProgressEstimatedRemainingTime(
-  response: JobProgress,
-): number {
+export function getJobProgressAwaitTime(response: JobProgress): number {
   const remaining = response.estimatedEnd - +new Date();
 
-  return zeroGuard(remaining);
+  return maxGuard(zeroGuard(remaining));
 }
 
 export function getJobProgressEstimatedDuration(response: JobProgress): number {
@@ -148,4 +150,8 @@ export function getJobProgressElapsedTime(response: JobProgress): number {
 
 function zeroGuard(input: number): number {
   return input > 0 ? input : 0;
+}
+
+function maxGuard(input: number): number {
+  return input > maxAwaitTime ? maxAwaitTime : input;
 }

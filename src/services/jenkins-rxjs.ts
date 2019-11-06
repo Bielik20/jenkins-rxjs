@@ -2,7 +2,7 @@ import { JenkinsPromisifiedAPI, JobBuildOptions } from 'jenkins';
 import { from, Observable, of, Subscriber } from 'rxjs';
 import { catchError, shareReplay, switchMap } from 'rxjs/operators';
 import {
-  getJobProgressEstimatedRemainingTime,
+  getJobProgressAwaitTime,
   isJobDone,
   JobDone,
   JobResponse,
@@ -77,7 +77,7 @@ export class JenkinsRxJs {
             return;
           }
 
-          await delay(getJobProgressEstimatedRemainingTime(parserResult));
+          await delay(getJobProgressAwaitTime(parserResult));
         }
       } catch (e) {
         // TODO: Rethrow here with info and catch inside this.run (test with VPN off/interrupted)

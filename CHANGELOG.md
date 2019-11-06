@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.1.0"></a>
+
+# [1.1.0](https://github.com/Bielik20/jenkins-rxjs/compare/v1.0.2...v1.1.0) (2019-11-06)
+
+### Features
+
+- add maxAwaitTime ([bcd1833](https://github.com/Bielik20/jenkins-rxjs/commit/bcd1833))
+
 <a name="1.0.2"></a>
 
 ## [1.0.2](https://github.com/Bielik20/jenkins-rxjs/compare/v1.0.1...v1.0.2) (2019-08-14)

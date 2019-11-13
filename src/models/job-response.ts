@@ -130,10 +130,16 @@ export function getJobProgressPercentage(response: JobProgress): number {
   return elapsed / duration;
 }
 
-export function getJobProgressAwaitTime(response: JobProgress): number {
+export function getJobProgressEstimatedRemainingTime(
+  response: JobProgress,
+): number {
   const remaining = response.estimatedEnd - +new Date();
 
-  return maxGuard(zeroGuard(remaining));
+  return zeroGuard(remaining);
+}
+
+export function getJobProgressAwaitTime(response: JobProgress): number {
+  return maxGuard(getJobProgressEstimatedRemainingTime(response));
 }
 
 export function getJobProgressEstimatedDuration(response: JobProgress): number {

@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.1.1"></a>
+
+## [1.1.1](https://github.com/Bielik20/jenkins-rxjs/compare/v1.1.0...v1.1.1) (2019-11-13)
+
+### Bug Fixes
+
+- bring getJobProgressAwaitTime back ([5601346](https://github.com/Bielik20/jenkins-rxjs/commit/5601346))
+
 <a name="1.1.0"></a>
 
 # [1.1.0](https://github.com/Bielik20/jenkins-rxjs/compare/v1.0.2...v1.1.0) (2019-11-06)
